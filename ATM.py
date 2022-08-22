@@ -94,24 +94,29 @@ What would you Like to Perform?
 """)
      transaction = int(input("Choose 1/2/3/4: "))
      time.sleep(1)
+     
+     logging.basicConfig(filename='reference.log', level=logging.DEBUG, format='%(asctime)s:%(message)s')
+
      if transaction == 1:
           TT = 'CHECK BALANCE'
+          logging.debug('Transaction Type: {}'.format(TT))
           time.sleep(1)
           check_balance()
      elif transaction == 2:
           TT = 'WITHDRAW'
+          logging.debug('Transaction Type: {}'.format(TT))
           time.sleep(1)
           withdraw()
      elif transaction == 3:
           TT = 'TRANSFER'
+          logging.debug('Transaction Type: {}'.format(TT))
           time.sleep(1)
           transfer()
      else:
           print('GoodBye..')
           sys.exit()
-     logging.basicConfig(
-     filename='reference.log', level=logging.DEBUG, format='%(asctime)s:%(message)s')
-     logging.debug('Transaction Type: {}'.format(TT))
+     #logging.basicConfig(filename='reference.log', level=logging.DEBUG, format='%(asctime)s:%(message)s')
+     #logging.debug('Transaction Type: %(TT)s')
      # if transaction == 1:
      #      TT = 'CHECK BALANCE'
      # elif transaction == 2:
