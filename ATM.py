@@ -70,6 +70,8 @@ def transactions():
                amnt = input("Enter the amount to Transfer: ")
                if len(receiver) == 10:
                     time.sleep(1)
+                    print(f"You Transfered {amnt} to {receiver}")
+                    time.sleep(1)
                     print("Transfer is Successfull.")
                     time.sleep(1)
                     again = input("Do you want to perform another transaction? (yes/no) : ").lower()
@@ -93,17 +95,30 @@ What would you Like to Perform?
      transaction = int(input("Choose 1/2/3/4: "))
      time.sleep(1)
      if transaction == 1:
+          TT = 'CHECK BALANCE'
           time.sleep(1)
           check_balance()
      elif transaction == 2:
+          TT = 'WITHDRAW'
           time.sleep(1)
           withdraw()
      elif transaction == 3:
+          TT = 'TRANSFER'
           time.sleep(1)
           transfer()
      else:
           print('GoodBye..')
           sys.exit()
+     logging.basicConfig(
+     filename='reference.log', level=logging.DEBUG, format='%(asctime)s:%(message)s')
+     logging.debug('Transaction Type: {}'.format(TT))
+     # if transaction == 1:
+     #      TT = 'CHECK BALANCE'
+     # elif transaction == 2:
+     #      TT = 'WITHDRAW'
+     # elif transaction == 3:
+     #      TT = 'TRANSFER'
+     
 
 
 def get_pin():
@@ -130,13 +145,5 @@ def get_pin():
                break
           except Exception as e:
                print("Choose the correct pin")
-                    
-          
-#get_pin()
-
-# ref = logging.basicConfig(
-# filename='reference.log', level=logging.DEBUG, format='%(asctime)s:%(message)s')
-# logging.debug('Transaction Type: {}')
-
 
 get_pin()
