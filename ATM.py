@@ -34,13 +34,55 @@ time.sleep(2)
 
 
 def transactions():
+     confirm = True
+     money = 10000
      def check_balance():
-          pass
+          print(f"Your Balance is: {money}")
+          while confirm:
+               again = input("Do you want to perform another transaction? (yes/no) : ").lower()
+               if again == "yes":
+                    time.sleep(1)
+                    transactions()
+               elif again == "no":
+                    break
+               else:
+                    print("Type either yes/no.")
      def withdraw():
-          
-          pass
+          amnt = int(input("Enter the amount to withdraw: "))
+          time.sleep(1)
+          print("Transaction processing...")
+          time.sleep(0.8)
+          print(f"Withdrawing {amnt}.")
+          time.sleep(1)
+          print("Done! Please take your cash.")
+          while confirm:
+               again = input("Do you want to perform another transaction? (yes/no) : ").lower()
+               if again == "yes":
+                    time.sleep(1)
+                    transactions()
+               elif again == "no":
+                    break
+               else:
+                    print("Type either yes/no.")
      def transfer():
-          pass
+          while confirm:
+               receiver = input("Enter the account Number: ")
+               amnt = input("Enter the amount to Transfer: ")
+               if len(receiver) == 10:
+                    time.sleep(1)
+                    print("Transfer is Successfull.")
+                    time.sleep(1)
+                    again = input("Do you want to perform another transaction? (yes/no) : ").lower()
+                    if again == "yes":
+                         time.sleep(1)
+                         transactions()
+                    elif again == "no":
+                         break
+                    else:
+                         print("Type either yes/no.")
+               else:
+                    print("Incorrect Account Details")
+
      print("""
 What would you Like to Perform?
 1. Check Balance
