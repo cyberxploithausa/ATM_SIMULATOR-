@@ -31,7 +31,7 @@ To run the ATM Simulator locally or explore the code, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/atm-simulator-python.git
+   git clone https://github.com/cyberxploithausa/ATM_SIMULATOR-.git
    cd ATM_SIMULATOR-
    python ATM.py
 Follow the on-screen prompts to interact with the ATM simulator.
