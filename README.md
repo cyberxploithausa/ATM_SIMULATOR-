@@ -2,7 +2,7 @@
 
 Welcome to the ATM Simulator repository! This project is a simple ATM (Automated Teller Machine) simulator built using Python. It allows users to perform basic banking transactions and provides a glimpse into how ATM systems work.
 
-![ATM Simulator](atm_screenshot.png)
+![ATM Simulator](image.png)
 
 ## Table of Contents
 
